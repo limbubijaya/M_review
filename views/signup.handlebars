@@ -1,0 +1,63 @@
+{{#if username}}
+  <script>
+    window.location.href = "http://localhost:8080/";
+  </script>
+{{/if}}
+
+<div class="loginDiv">
+  <form
+    class="loginForm"
+    id="signup_form"
+    method="post"
+    action="http://localhost:8080/api/users/signup"
+  >
+    <h1 class="text-center">M-review</h1>
+    <div class="form-group mt-3 passDiv">
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+        required
+      />
+    </div>
+    <div class="form-group mt-3 passDiv">
+      <input
+        type="text"
+        class="form-control"
+        name="username"
+        id="username"
+        placeholder="Enter username"
+        required
+      />
+    </div>
+    <div class="form-group mt-3 passDiv">
+      <input
+        type="password"
+        name="password"
+        class="form-control"
+        id="password"
+        placeholder="Enter password"
+        required
+      />
+    </div>
+    <div class="loginBtnContainer">
+      <button type="submit" class="loginBtn">Sign Up</button>
+    </div>
+    <h5 class="loginOr">or</h5>
+    <a href="http://localhost:8080/api/users/auth/google" class="btn btn-danger">Sign Up with Google</a>
+    <div class="signup">
+      <span>Already have an account?
+        <a href="http://localhost:8080/login">Login</a>
+      </span>
+    </div>
+  </form>
+</div>
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"
+></script>
+<script src="http://localhost:8080/assets/js/signup.js"></script>

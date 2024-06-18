@@ -1,0 +1,53 @@
+{{#if username}}
+  {{#unless havePosted}}
+  <script>
+    window.location.href = "http://localhost:8080/";
+  </script>
+  {{/unless}}
+  {{else}}
+  <script>
+    window.location.href = "http://localhost:8080/";
+  </script>
+{{/if}}
+
+<div class="updateContainer">
+  <div class="updateContainerInside">
+    <h4>Update your review</h4>
+    <form
+      class="updateForm"
+      id="updateForm"
+      method="post"
+      action="http://localhost:8080/movieid/{{movie.id}}/review/editReview/updateReview"
+    >
+
+      <div class="form-group mt-3 reviewInput">
+        <h6>How was the movie?</h6>
+        <input
+          type="text"
+          class="form-control"
+          id="updateComment"
+          name="updateComment"
+          placeholder="Enter your comment"
+          required
+        />
+      </div>
+
+      <div class="form-group mt-3 reviewInput">
+        <h6>What would you rate the movie out of 10?</h6>
+        <input
+          type="number"
+          class="form-control"
+          name="updateRating"
+          id="updateRating"
+          placeholder="Enter your rating"
+          min="0"
+          max="10"
+          required
+        />
+      </div>
+      <div class="submitReviewBtnContainer">
+        <button type="submit" class="updateReviewBtn">Update your review</button>
+      </div>
+    </form>
+  </div>
+</div>

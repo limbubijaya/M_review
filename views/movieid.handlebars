@@ -1,0 +1,38 @@
+<div class="movieIdContainer">
+  <iframe
+    width="1280"
+    height="480"
+    src="{{movie.youtube_link}}"
+    title="YouTube video player"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div class="movieIdContainerMiddle">
+  <div class="movieIdImgContainer">
+    <img class="movieIdImg" src="{{movie.image_link}}" alt="{{movie.title}}" />
+  </div>
+  <ul class="movieIdDescription">
+    <h1>{{movie.title}}</h1>
+    <li class="movieIdListItem"><p>Release Date: {{movie.release_date}}</p></li>
+    <li class="movieIdListItem"><p>Director: {{movie.director}}</p></li>
+    <li class="movieIdListItem"><p>Writers: {{movie.writers}}</p></li>
+    <li class="movieIdListItem"><p>{{movie.description}}</p></li>
+  </ul>
+  <div class="ms-auto">
+    {{#if overallReview}}
+      <h3 class="movieIdReview">{{overallReview}}/10 &#9733;</h3>
+    {{else}}
+      <h3 class="movieIdReviewElse">No Reviews</h3>
+    {{/if}}
+  </div>
+</div>
+
+<div class="checkReviewBtnDiv">
+  <button type="submit" class="reviewBtn">
+    <a
+      class="reviewBtnTxt"
+      href="http://localhost:8080/movieid/{{movie.id}}/review"
+    >CHECK REVIEWS</a>
+  </button>
+</div>

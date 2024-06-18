@@ -1,0 +1,13 @@
+<h1 class="lastestMovie">MOVIE LIST</h1>
+<div class="movieListContainer">
+  {{#each movieList}}
+  <a href="http://localhost:8080/movieid/{{id}}">
+    <div class="movieList">
+      <img class="listImg" src="{{image_link}}" alt="{{title}}">
+      <div class="movieListWord">
+        <h6 id="movieTitle">{{title}}</h6>
+      </div>
+    </div>
+  </a>
+  {{/each}}
+</div>

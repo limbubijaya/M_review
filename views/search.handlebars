@@ -1,0 +1,27 @@
+<h1 class="lastestMovie">MOVIES</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Search Results</h1>
+      {{#if movies.length}}
+      <ul class="list-group">
+        {{#each movies}}
+        <div class="movie-result">
+            <a href="/movieid/{{id}}">
+                <li class="list-group-item">
+                    <img class="searchImg" src="{{image_link}}" alt="{{title}}">
+                    <h3>{{title}}</h3>
+                    <p>Release Date: {{release_date}}</p>
+                    <p>Director: {{director}}</p>
+                </li>
+            </a>
+        </div>
+        {{/each}}
+      </ul>
+      {{else}}
+      <p>No movies found.</p>
+      {{/if}}
+    </div>
+  </div>
+</div>
